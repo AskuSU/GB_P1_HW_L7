@@ -1,7 +1,42 @@
 #include<iostream>
 #include"MyLib.h"
+#include"Task1.h"
 
 using namespace std;
+using namespace myLib;
+
+void Task1()
+{
+	cout << "Подсчет кол-ва отрицательных элементов массива:" << endl << endl;
+	cout << "Введите кол-во элементов массива: ";
+	size_t size = 0;
+	size = GetUserInput();
+	float* arrPtr = task1::initArray(size);
+	if (arrPtr)
+	{
+		PrintArr(size, arrPtr);
+		size_t qtePositive = 0, qteNegative = 0;
+		task1::countingNumbers(size, arrPtr, qtePositive, qteNegative);
+		cout << "Положительных элементов: " << qtePositive << endl;
+		cout << "Отрицательных элементов: " << qteNegative << endl;
+	}
+	else cout << "Не удалсь выделить память под массив!" << endl;
+}
+
+void Task2()
+{
+
+}
+
+void Task3()
+{
+
+}
+
+void Task4()
+{
+
+}
 
 int main()
 {
@@ -14,7 +49,7 @@ int main()
 		taskNumber = getUserSelectedTask(5);
 		switch (taskNumber)
 		{
-		/*case 1: Task1();
+		case 1: Task1();
 			break;
 		case 2: Task2();
 			break;
@@ -22,8 +57,6 @@ int main()
 			break;
 		case 4: Task4();
 			break;
-		case 5: Task5();
-			break;*/
 		}
 		cout << endl;
 	}

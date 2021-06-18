@@ -2,13 +2,13 @@
 
 namespace myLib
 {
-	unsigned short GetUserInput()
+	unsigned short GetUserInput(bool allowZero)
 	{
 		while (true)
 		{
 			int input;
 			cin >> input;
-			if (cin.fail() || input <= 0)
+			if (cin.fail() || (input <= 0)&&!allowZero || (input < 0) && allowZero)
 			{
 				cout << "ќшибка ввода, повторите ввод: ";
 				cin.clear();
@@ -29,7 +29,7 @@ namespace myLib
 		do
 		{
 			cout << "¬ведите номер задачи от 1 до " << qtyTask << ":" << endl;
-			taskNumber = GetUserInput();
+			taskNumber = GetUserInput(false);
 		} while (taskNumber > qtyTask || taskNumber < 1);
 
 		cout << endl;

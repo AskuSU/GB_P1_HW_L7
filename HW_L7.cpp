@@ -1,6 +1,7 @@
 #include<iostream>
 #include"MyLib.h"
 #include"Task1.h"
+#include"Task2.h"
 
 using namespace std;
 using namespace myLib;
@@ -10,7 +11,7 @@ void Task1()
 	cout << "Подсчет кол-ва отрицательных элементов массива:" << endl << endl;
 	cout << "Введите кол-во элементов массива: ";
 	size_t size = 0;
-	size = GetUserInput();
+	size = GetUserInput(false);
 	float* arrPtr = task1::initArray(size);
 	if (arrPtr)
 	{
@@ -25,7 +26,13 @@ void Task1()
 
 void Task2()
 {
-
+	cout << "Проверка принадлежности введеного числа интервалу:" << endl << endl;
+	cout << "Введите положительное число: ";
+	unsigned short a = GetUserInput(true);
+	const unsigned short end = 100;
+	if (checkNumberInInterval(a, end)) cout << "true";
+	else cout << "false";
+	cout << endl;
 }
 
 void Task3()

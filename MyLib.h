@@ -5,7 +5,7 @@ using namespace std;
 
 namespace myLib
 {
-	unsigned short GetUserInput();
+	unsigned short GetUserInput(bool allowZero);
 	unsigned short getUserSelectedTask(unsigned short qtyTask);
 
 	void PrintArr(size_t size, double* Arr);

@@ -13,4 +13,6 @@ namespace myLib
 	void PrintArr(size_t size, bool NeedCnt, unsigned short* Arr);
 	void PrintArr(size_t size, bool NeedCnt, int* Arr);
 	void PrintArr(size_t size, bool NeedCnt, int* Arr, size_t medianPos);
+
+	string getNameFileFromUser(unsigned short indexF);
 }

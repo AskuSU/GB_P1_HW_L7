@@ -1,8 +1,10 @@
 #include<iostream>
+#include<windows.h>
 #include"MyLib.h"
 #include"Task1.h"
 #include"Task2.h"
 #include"Task3.h"
+#include"Task4.h"
 
 using namespace std;
 using namespace myLib;
@@ -49,7 +51,20 @@ void Task3()
 
 void Task4()
 {
-
+	cout << "Создание и сохранение в файл стркутуры Сотрудник:" << endl << endl;
+	Employee* ptrEmp = new Employee;
+	if (ptrEmp)
+	{
+		printEmployee(ptrEmp);
+		cout << "Сохранение в файл:" << endl << endl;
+		saveStructToFile(ptrEmp, getNameFileFromUser(0));
+		delete ptrEmp;
+	}
+	else
+	{
+		cerr << "Не удалось выделить пмять под структуру Employee" << endl;
+		return;
+	}
 }
 
 int main()
@@ -57,10 +72,13 @@ int main()
 	setlocale(LC_ALL, "RU");
 	srand(time(0));
 
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+
 	unsigned short taskNumber = 0;
 	while (true)
 	{
-		taskNumber = getUserSelectedTask(5);
+		taskNumber = getUserSelectedTask(4);
 		switch (taskNumber)
 		{
 		case 1: Task1();

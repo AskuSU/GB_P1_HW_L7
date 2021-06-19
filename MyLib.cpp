@@ -1,4 +1,4 @@
-#include"MyLib.h"
+ï»¿#include"MyLib.h"
 
 namespace myLib
 {
@@ -10,7 +10,7 @@ namespace myLib
 			cin >> input;
 			if (cin.fail() || (input <= 0)&&!allowZero || (input < 0) && allowZero)
 			{
-				cout << "Îøèáêà ââîäà, ïîâòîðèòå ââîä: ";
+				cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ð²Ð²Ð¾Ð´Ð°, Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´: ";
 				cin.clear();
 				cin.ignore(numeric_limits<streamsize>::max(), '\n');
 			}
@@ -28,7 +28,7 @@ namespace myLib
 		unsigned short taskNumber = 0;
 		do
 		{
-			cout << "Ââåäèòå íîìåð çàäà÷è îò 1 äî " << qtyTask << ":" << endl;
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ Ð·Ð°Ð´Ð°Ñ‡Ð¸ Ð¾Ñ‚ 1 Ð´Ð¾ " << qtyTask << ":" << endl;
 			taskNumber = GetUserInput(false);
 		} while (taskNumber > qtyTask || taskNumber < 1);
 
@@ -39,7 +39,7 @@ namespace myLib
 
 	void PrintArr(size_t size, double* Arr)
 	{
-		cout << "Êîë-âî ýëåìåíòîâ = " << size << endl;
+		cout << "ÐšÐ¾Ð»-Ð²Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² = " << size << endl;
 		for (size_t i = 0; i < size; i++)
 		{
 			cout << Arr[i] << ' ';
@@ -49,7 +49,7 @@ namespace myLib
 
 	void PrintArr(size_t size, float* Arr)
 	{
-		cout << "Êîë-âî ýëåìåíòîâ = " << size << endl;
+		cout << "ÐšÐ¾Ð»-Ð²Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² = " << size << endl;
 		for (size_t i = 0; i < size; i++)
 		{
 			cout << Arr[i] << ' ';
@@ -59,7 +59,7 @@ namespace myLib
 
 	void PrintArr(size_t size, bool NeedCnt, unsigned short* Arr)
 	{
-		if (NeedCnt) cout << "Êîë-âî ýëåìåíòîâ = " << size << endl;
+		if (NeedCnt) cout << "ÐšÐ¾Ð»-Ð²Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² = " << size << endl;
 		for (size_t i = 0; i < size; i++)
 		{
 			cout << Arr[i] << ' ';
@@ -69,7 +69,7 @@ namespace myLib
 
 	void PrintArr(size_t size, bool NeedCnt, int* Arr)
 	{
-		if (NeedCnt) cout << "Êîë-âî ýëåìåíòîâ = " << size << endl;
+		if (NeedCnt) cout << "ÐšÐ¾Ð»-Ð²Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² = " << size << endl;
 		for (size_t i = 0; i < size; i++)
 		{
 			cout << Arr[i] << ' ';
@@ -79,7 +79,7 @@ namespace myLib
 
 	void PrintArr(size_t size, bool NeedCnt, int* Arr, size_t medianPos)
 	{
-		if (NeedCnt) cout << "Êîë-âî ýëåìåíòîâ = " << size << endl;
+		if (NeedCnt) cout << "ÐšÐ¾Ð»-Ð²Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² = " << size << endl;
 		for (size_t i = 0; i < size; i++)
 		{
 			if (medianPos > 0 && medianPos == i) cout << "|| ";
@@ -90,19 +90,19 @@ namespace myLib
 
 	string getNameFileFromUser(unsigned short indexF)
 	{
-		cout << "Ââåäèòå èìÿ";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð¼Ñ";
 		switch (indexF)
 		{
 		case 0:
 			break;
 		case 100:
-			cout << " Êîíå÷íîãî";
+			cout << " ÐšÐ¾Ð½ÐµÑ‡Ð½Ð¾Ð³Ð¾";
 			break;
 		default:
-			cout << " " << indexF << "ãî";
+			cout << " " << indexF << "Ð³Ð¾";
 			break;
 		}
-		cout << " ôàéëà(áåç ðàñøèðåíèÿ): ";
+		cout << " Ñ„Ð°Ð¹Ð»Ð°(Ð±ÐµÐ· Ñ€Ð°ÑÑˆÐ¸Ñ€ÐµÐ½Ð¸Ñ): ";
 		string s;
 		cin >> s;
 

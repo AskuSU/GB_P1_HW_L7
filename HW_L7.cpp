@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<windows.h>
 #include"MyLib.h"
 #include"Task1.h"
@@ -11,8 +11,8 @@ using namespace myLib;
 
 void Task1()
 {
-	cout << "Ïîäñ÷åò êîë-âà îòðèöàòåëüíûõ ýëåìåíòîâ ìàññèâà:" << endl << endl;
-	cout << "Ââåäèòå êîë-âî ýëåìåíòîâ ìàññèâà: ";
+	cout << "ÐŸÐ¾Ð´ÑÑ‡ÐµÑ‚ ÐºÐ¾Ð»-Ð²Ð° Ð¾Ñ‚Ñ€Ð¸Ñ†Ð°Ñ‚ÐµÐ»ÑŒÐ½Ñ‹Ñ… ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð¼Ð°ÑÑÐ¸Ð²Ð°:" << endl << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»-Ð²Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð¼Ð°ÑÑÐ¸Ð²Ð°: ";
 	size_t size = 0;
 	size = GetUserInput(false);
 	float* arrPtr = task1::initArray(size);
@@ -21,16 +21,16 @@ void Task1()
 		PrintArr(size, arrPtr);
 		size_t qtePositive = 0, qteNegative = 0;
 		task1::countingNumbers(size, arrPtr, qtePositive, qteNegative);
-		cout << "Ïîëîæèòåëüíûõ ýëåìåíòîâ: " << qtePositive << endl;
-		cout << "Îòðèöàòåëüíûõ ýëåìåíòîâ: " << qteNegative << endl;
+		cout << "ÐŸÐ¾Ð»Ð¾Ð¶Ð¸Ñ‚ÐµÐ»ÑŒÐ½Ñ‹Ñ… ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð²: " << qtePositive << endl;
+		cout << "ÐžÑ‚Ñ€Ð¸Ñ†Ð°Ñ‚ÐµÐ»ÑŒÐ½Ñ‹Ñ… ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð²: " << qteNegative << endl;
 	}
-	else cout << "Íå óäàëñü âûäåëèòü ïàìÿòü ïîä ìàññèâ!" << endl;
+	else cout << "ÐÐµ ÑƒÐ´Ð°Ð»ÑÑŒ Ð²Ñ‹Ð´ÐµÐ»Ð¸Ñ‚ÑŒ Ð¿Ð°Ð¼ÑÑ‚ÑŒ Ð¿Ð¾Ð´ Ð¼Ð°ÑÑÐ¸Ð²!" << endl;
 }
 
 void Task2()
 {
-	cout << "Ïðîâåðêà ïðèíàäëåæíîñòè ââåäåíîãî ÷èñëà èíòåðâàëó:" << endl << endl;
-	cout << "Ââåäèòå ïîëîæèòåëüíîå ÷èñëî: ";
+	cout << "ÐŸÑ€Ð¾Ð²ÐµÑ€ÐºÐ° Ð¿Ñ€Ð¸Ð½Ð°Ð´Ð»ÐµÐ¶Ð½Ð¾ÑÑ‚Ð¸ Ð²Ð²ÐµÐ´ÐµÐ½Ð¾Ð³Ð¾ Ñ‡Ð¸ÑÐ»Ð° Ð¸Ð½Ñ‚ÐµÑ€Ð²Ð°Ð»Ñƒ:" << endl << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¿Ð¾Ð»Ð¾Ð¶Ð¸Ñ‚ÐµÐ»ÑŒÐ½Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾: ";
 	unsigned short a = GetUserInput(true);
 	const unsigned short end = 100;
 	if (checkNumberInInterval(a, end)) cout << "true";
@@ -42,7 +42,7 @@ void Task3()
 {
 #define SIZE 6
 
-	cout << "Ñîðòèðîâêà ïîëüçîâàòåëüñêîãî ìàññèâà:" << endl << endl;
+	cout << "Ð¡Ð¾Ñ€Ñ‚Ð¸Ñ€Ð¾Ð²ÐºÐ° Ð¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÑÐºÐ¾Ð³Ð¾ Ð¼Ð°ÑÑÐ¸Ð²Ð°:" << endl << endl;
 	int* arrPtr = createIntArr(SIZE);
 	initArr(arrPtr, SIZE);
 	bubbleSort(arrPtr, SIZE);
@@ -51,18 +51,18 @@ void Task3()
 
 void Task4()
 {
-	cout << "Ñîçäàíèå è ñîõðàíåíèå â ôàéë ñòðêóòóðû Ñîòðóäíèê:" << endl << endl;
+	cout << "Ð¡Ð¾Ð·Ð´Ð°Ð½Ð¸Ðµ Ð¸ ÑÐ¾Ñ…Ñ€Ð°Ð½ÐµÐ½Ð¸Ðµ Ð² Ñ„Ð°Ð¹Ð» ÑÑ‚Ñ€ÐºÑƒÑ‚ÑƒÑ€Ñ‹ Ð¡Ð¾Ñ‚Ñ€ÑƒÐ´Ð½Ð¸Ðº:" << endl << endl;
 	Employee* ptrEmp = new Employee;
 	if (ptrEmp)
 	{
 		printEmployee(ptrEmp);
-		cout << "Ñîõðàíåíèå â ôàéë:" << endl << endl;
+		cout << "Ð¡Ð¾Ñ…Ñ€Ð°Ð½ÐµÐ½Ð¸Ðµ Ð² Ñ„Ð°Ð¹Ð»:" << endl << endl;
 		saveStructToFile(ptrEmp, getNameFileFromUser(0));
 		delete ptrEmp;
 	}
 	else
 	{
-		cerr << "Íå óäàëîñü âûäåëèòü ïìÿòü ïîä ñòðóêòóðó Employee" << endl;
+		cerr << "ÐÐµ ÑƒÐ´Ð°Ð»Ð¾ÑÑŒ Ð²Ñ‹Ð´ÐµÐ»Ð¸Ñ‚ÑŒ Ð¿Ð¼ÑÑ‚ÑŒ Ð¿Ð¾Ð´ ÑÑ‚Ñ€ÑƒÐºÑ‚ÑƒÑ€Ñƒ Employee" << endl;
 		return;
 	}
 }

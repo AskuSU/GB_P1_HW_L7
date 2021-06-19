@@ -1,28 +1,28 @@
-#include"Task4.h"
+ï»¿#include"Task4.h"
 
 employee::employee()
 {	
-	cout << "Ââåäèòå Èìÿ ñîòðóäíèêà: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð˜Ð¼Ñ ÑÐ¾Ñ‚Ñ€ÑƒÐ´Ð½Ð¸ÐºÐ°: ";
 	cin >> name;
-	cout << "Ââåäèòå Ôàìèëèþ ñîòðóäíèêà: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¤Ð°Ð¼Ð¸Ð»Ð¸ÑŽ ÑÐ¾Ñ‚Ñ€ÑƒÐ´Ð½Ð¸ÐºÐ°: ";
 	cin >> surname;
-	cout << "Ââåäèòå Ãîä ðîæäåíè ñîòðóäíèêà: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð“Ð¾Ð´ Ñ€Ð¾Ð¶Ð´ÐµÐ½Ð¸ ÑÐ¾Ñ‚Ñ€ÑƒÐ´Ð½Ð¸ÐºÐ°: ";
 	cin >> yearOfBirth;
-	cout << "Ââåäèòå Äîëæíîñòü íà êîòîðîé ðàáîòàåò ñîòðóäíèê: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð”Ð¾Ð»Ð¶Ð½Ð¾ÑÑ‚ÑŒ Ð½Ð° ÐºÐ¾Ñ‚Ð¾Ñ€Ð¾Ð¹ Ñ€Ð°Ð±Ð¾Ñ‚Ð°ÐµÑ‚ ÑÐ¾Ñ‚Ñ€ÑƒÐ´Ð½Ð¸Ðº: ";
 	cin >> position;
-	cout << "Ââåäèòå ÇÏ ñîòðóäíèêà: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð—ÐŸ ÑÐ¾Ñ‚Ñ€ÑƒÐ´Ð½Ð¸ÐºÐ°: ";
 	cin >> wage;	
 }
 
 void printEmployee(Employee* empl)
 {
 	cout << endl;
-	cout << "Ñîòðóäíèê: " << empl->surname << " " << empl->name << endl;
-	cout << "Ãîä ðîæäåíèÿ: " << empl->yearOfBirth << endl;
-	cout << "Äîëæíîñòü: " << empl->position << endl;
-	cout << "ÇÏ: " << empl->wage << endl << endl;
+	cout << "Ð¡Ð¾Ñ‚Ñ€ÑƒÐ´Ð½Ð¸Ðº: " << empl->surname << " " << empl->name << endl;
+	cout << "Ð“Ð¾Ð´ Ñ€Ð¾Ð¶Ð´ÐµÐ½Ð¸Ñ: " << empl->yearOfBirth << endl;
+	cout << "Ð”Ð¾Ð»Ð¶Ð½Ð¾ÑÑ‚ÑŒ: " << empl->position << endl;
+	cout << "Ð—ÐŸ: " << empl->wage << endl << endl;
 
-	cout << "Ðàçìåð ñòðóêòóðû Employee = " << sizeof(*empl) << " áàéò." << endl;
+	cout << "Ð Ð°Ð·Ð¼ÐµÑ€ ÑÑ‚Ñ€ÑƒÐºÑ‚ÑƒÑ€Ñ‹ Employee = " << sizeof(*empl) << " Ð±Ð°Ð¹Ñ‚." << endl;
 }
 
 void saveStructToFile(Employee* empl, string nameF)
@@ -36,6 +36,6 @@ void saveStructToFile(Employee* empl, string nameF)
 	}
 	else
 	{
-		cout << "Íå óäàëîñü ñîçäàòü ôàéë " << nameF << ".txt" << endl;
+		cout << "ÐÐµ ÑƒÐ´Ð°Ð»Ð¾ÑÑŒ ÑÐ¾Ð·Ð´Ð°Ñ‚ÑŒ Ñ„Ð°Ð¹Ð» " << nameF << ".txt" << endl;
 	}
 }

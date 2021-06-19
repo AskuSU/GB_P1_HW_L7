@@ -1,4 +1,4 @@
-#include"Task3.h"
+ï»¿#include"Task3.h"
 
 using namespace std;
 
@@ -12,7 +12,7 @@ int* createIntArr(size_t size)
 
 void initArr(int* arr, size_t size)
 {
-	cout << "Ââåäèòå ïîäðÿä " << size << " ýëåìåíòîâ ìàññèâà:" << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¿Ð¾Ð´Ñ€ÑÐ´ " << size << " ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð¼Ð°ÑÑÐ¸Ð²Ð°:" << endl;
 	for (size_t i = 0; i < size; i++)
 	{
 		cin >> arr[i];
